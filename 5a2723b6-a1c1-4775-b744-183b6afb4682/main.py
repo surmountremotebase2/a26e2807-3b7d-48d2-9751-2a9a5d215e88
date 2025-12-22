@@ -16,10 +16,11 @@ class TradingStrategy(Strategy):
         return self.data_list
     def run(self, data):
         analyst_long_holdings = data[("analyst_long",)]
-        allocations = {"AAPL": 1}
+        allocations = {}
         if analyst_long_holdings:
             alloc_dict = analyst_long_holdings[-1]['allocations']
             log(f"Trading: {analyst_long_holdings[-1]['allocations']}")
             allocations = alloc_dict
         log(f"allocations:{allocations}")
         return TargetAllocation(allocations)
+
