@@ -19,8 +19,7 @@ class TradingStrategy(Strategy):
         allocations = {}
         if analyst_long_holdings:
             alloc_dict = analyst_long_holdings[-1]['allocations']
-            log(f"Trading: {analyst_long_holdings[-1]['allocations']}")
+            #log(f"Trading: {analyst_long_holdings[-1]['allocations']}")
             allocations = alloc_dict
-        log(f"allocations:{allocations}")
+        #log(f"allocations:{allocations}")
         return TargetAllocation(allocations)
-
