@@ -21,5 +21,5 @@ class TradingStrategy(Strategy):
             alloc_dict = congress_buys_holdings[-1]['allocations']
             #log(f"Trading: {congress_buys_holdings[-1]['allocations']}")
             allocations = alloc_dict
-        log(f"allocations:{allocations}")
+        #log(f"allocations:{allocations}")
         return TargetAllocation(allocations)
